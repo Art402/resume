@@ -15,6 +15,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{tikz}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -98,21 +99,30 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}lr@{}}
-  % Column 1: Profile Image
-  \includegraphics[width=2cm, height=2cm, keepaspectratio]{agires_no_back_crop.png}
+  % Column 1: Circular Profile Image via TikZ
+  \raisebox{0.8cm}{ % Adjust this value up/down as needed
+    \begin{tikzpicture}[baseline=(current bounding box.center)]
+      \clip (0,0) circle (1.5cm);
+      \node at (0,0) {\includegraphics[width=3cm]{agires_no_back_crop.png}};
+    \end{tikzpicture}
+  }
+  \qquad
   & 
-  % Column 2: Name & Website
-  \begin{tabular}[b]{@{}l@{}}
-    \textbf{\large Arthur Gires}\\
-    \textbf{Data Analyst}
-  \end{tabular} 
-  & 
-  % Column 3: Contact Info
-  \begin{tabular}[b]{@{}r@{}}
-    Email: \href{mailto:arthur.gires@protonmail.com}{arthur.gires@protonmail.com} \\
-    Mobile: \href{tel:+33625083649}{+33 6 25 08 36 49}\\
-    Website: \href{https://arthurgires.fr/}{arthurgires.fr}
-  \end{tabular}
+  % Column 2: Name & Infos
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}lr@{}}
+    % Column 2a: Name
+    \begin{tabular}[b]{@{}l@{}}
+      {\huge \textbf{Arthur Gires}} \\[3pt] % Sized to XLARGE / LARGE
+      {\Large \textbf{Data Analyst}}         % Sized to Large
+    \end{tabular}
+    & 
+    % Column 2b: Contact Info
+    \begin{tabular}[b]{@{}r@{}}
+      Email: \href{mailto:arthur.gires@protonmail.com}{arthur.gires@protonmail.com} \\
+      Mobile: \href{tel:+33625083649}{+33 6 25 08 36 49}\\
+      Website: \href{https://arthurgires.fr/}{arthurgires.fr}
+    \end{tabular}
+  \end{tabular*}
 \end{tabular*}
 
 
@@ -133,7 +143,7 @@
           {Built a .kmz generator to GAFAM clients topological standard. Added Simplex Noise for privacy.\\
           Automated DICT/ATU utility response workflows, completely replacing Sogelink and saving the company €40k/year in software licensing.}
         \resumeItem{MC80a Home One Tydirium}
-          {Architected an end-to-end multi-layer routing and pricing ecosystem, version controlled and packaged (git / docker) to unify and simplify buisness processes.\\
+          {Architected an end-to-end multi-layer routing and pricing ecosystem, version controlled and scalable (git / docker) to unify and simplify buisness processes.\\
           Built a REST-like API (FastAPI / PostGIS) backend, a PyQGIS plugin front for Pre-sales team, and endpoint documentation (pydantic) for IT departement (Dolibarr).\\
           Replaced legacy VBA macros and local pg\_routing implementation with a server-side SQL routing and pricing engine (PL/pgSQL).\\
           Established an ELT pipeline (dbt + Oracle FDW) for live data sync. Added vizualisation tools (pg\_tileserv).}
@@ -156,9 +166,9 @@
       {Among SNCF regional head management, contributed to a €30M project replacing legacy railway planning tools.}
       \resumeItemListStart
         \resumeItem{Data Transformation}
-          {Developed regex-based regional data collection tools and CSV import modules for the Hastus system.}
+          {Developped regex data collection tools and CSV modules for the Hastus system.}
         \resumeItem{Workflow Optimization}
-          {Delivered heavy data files (~100MB) across multiple R\&D teams and provided expertise on railway "sillon" (track access) data.}
+          {Delivered and cleaned trial data for the across  teams.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
