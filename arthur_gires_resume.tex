@@ -9,6 +9,7 @@
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
+\usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
@@ -96,9 +97,22 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email: \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-  \href{https://sourabhbajaj.com/}{sourabhbajaj.com} & Mobile: \href{tel:+11234567890}{+1-123-456-7890} \\
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}lr@{}}
+  % Column 1: Profile Image
+  \includegraphics[width=2cm, height=2cm, keepaspectratio]{agires_no_back_crop.png}
+  & 
+  % Column 2: Name & Website
+  \begin{tabular}[b]{@{}l@{}}
+    \textbf{\large Arthur Gires}\\
+    \textbf{Data Analyst}
+  \end{tabular} 
+  & 
+  % Column 3: Contact Info
+  \begin{tabular}[b]{@{}r@{}}
+    Email: \href{mailto:arthur.gires@protonmail.com}{arthur.gires@protonmail.com} \\
+    Mobile: \href{tel:+33625083649}{+33 6 25 08 36 49}\\
+    Website: \href{https://arthurgires.fr/}{arthurgires.fr}
+  \end{tabular}
 \end{tabular*}
 
 
@@ -139,36 +153,12 @@
     \resumeSubheading
       {SNCF}{Lyon, France}
       {Data Integration Intern}{Apr 2022 -- Sept 2022}
-      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
+      {Among SNCF regional head management, contributed to a €30M project replacing legacy railway planning tools.}
       \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing, etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Lucena Research}{Atlanta, GA}
-      {Data Scientist}{Summer 2012 and 2013}
-      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
-      \resumeItemListStart
-        \resumeItem{Portfolio Management}
-          {Created models for portfolio hedging, portfolio optimization and price forecasting. Also created a strategy backtesting engine used for simulating and backtesting strategies.}
-        \resumeItem{QuantDesk}
-          {Python backend for a web application used by hedge fund managers for portfolio management.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Research and Teaching Assistant}{Jan 2012 -- Dec 2013}
-      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
-      \resumeItemListStart
-        \resumeItem{Research Assistant -- Machine Learning}
-          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the Python library QSTK.}
-        \resumeItem{Teaching Assistant -- Computational Investing}
-          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignments, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
+        \resumeItem{Data Transformation}
+          {Developed regex-based regional data collection tools and CSV import modules for the Hastus system.}
+        \resumeItem{Workflow Optimization}
+          {Delivered heavy data files (~100MB) across multiple R\&D teams and provided expertise on railway "sillon" (track access) data.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
