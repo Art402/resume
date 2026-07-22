@@ -59,12 +59,13 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[5]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small #3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
+    \vspace{8pt} \\ \small{#5}\vspace{-3pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -109,57 +110,49 @@
     \resumeSubheading
       {Sipartech}{Toulouse, France}
       {Data Analyst}{Feb 2025 -- Present}
+      {Creation of a position among the GIS team. Focus on improving data handling withing the company and for the Pre-sales team.}
       \resumeItemListStart
-        \resumeItem{Pre-sales Quotation Generator .xlsm}
-          {Updated the excel worksheet handling pre-sales quotations according to infrastructure PM's experiences.\\
+        \resumeItem{Pre-sales Quotation Generator}
+          {Updated the .xlsm worksheets handling pre-sales quotations according to infrastructure PM's experiences.\\
           Refactored and improved VBA macros robustness. Halved the 4000 lines legacy code. Heavily simplified output readability.}
         \resumeItem{QGIS Plugins}
           {Built a .kmz generator to GAFAM clients topological standard. Added Simplex Noise for privacy.\\
           Automated DICT/ATU utility response workflows, completely replacing Sogelink and saving the company €40k/year in software licensing.}
         \resumeItem{MC80a Home One Tydirium}
-          {Architected an end-to-end multi-layer routing and pricing ecosystem, version controlled and packaged (git / docker).\\
-          Built a REST-like API (FastAPI / PostGIS) backend and a dedicated PyQGIS front-end plugin for Pre-sales teams.\\
+          {Architected an end-to-end multi-layer routing and pricing ecosystem, version controlled and packaged (git / docker) to unify and simplify buisness processes.\\
+          Built a REST-like API (FastAPI / PostGIS) backend, a PyQGIS plugin front for Pre-sales team, and endpoint documentation (pydantic) for IT departement (Dolibarr).\\
           Replaced legacy VBA macros and local pg\_routing implementation with a server-side SQL routing and pricing engine (PL/pgSQL).\\
           Established an ELT pipeline (dbt + Oracle FDW) for live data sync. Added vizualisation tools (pg\_tileserv).}
       \resumeItemListEnd
       
-% --------Multiple Positions Heading------------
-  %  \resumeSubSubheading
-  %   {Software Engineer I}{Oct 2014 -- Sep 2016}
-  %   \resumeItemListStart
-  %      \resumeItem{Apache Beam}
-  %        {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-  %   \resumeItemListEnd
-
-%-------------------------------------------
+    \resumeSubheading
+      {Sabbatical}{Mont-Saint-Michel, France}
+      {Spiritual Retreat}{Mar 2023 -- Dec 2024}
+      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
+      \resumeItemListStart
+        \resumeItem{Personal}
+          {Dove in }
+        \resumeItem{Spiritual Journey}
+          {Met with the Community of Saint Martin ordering in the Mont-Saint-Michel parish .}
+      \resumeItemListEnd
 
     \resumeSubheading
-      {Coursera}{Mountain View, CA}
-      {Senior Software Engineer}{Jan 2014 -- Oct 2016}
+      {SNCF}{Lyon, France}
+      {Data Integration Intern}{Apr 2022 -- Sept 2022}
+      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
       \resumeItemListStart
         \resumeItem{Notifications}
           {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing, etc.}
         \resumeItem{Nostos}
           {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
         \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusable patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowdsourcing platform which allowed for creating various tasks for crowdsourcing or embedding surveys across the Coursera platform.}
-        \resumeItem{Dev Environment}
-          {Analytics environment based on Docker and AWS, standardized the Python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
-        \resumeItem{Data Warehousing}
-          {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
-        \resumeItem{Recommendations}
-          {Core service for all recommendation systems at Coursera, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
-        \resumeItem{Content Discovery}
-          {Improved content discovery by building a new onboarding experience on Coursera. Used this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
-        \resumeItem{Course Dashboards}
-          {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
+          {Dataduct an open source.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Lucena Research}{Atlanta, GA}
       {Data Scientist}{Summer 2012 and 2013}
+      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
       \resumeItemListStart
         \resumeItem{Portfolio Management}
           {Created models for portfolio hedging, portfolio optimization and price forecasting. Also created a strategy backtesting engine used for simulating and backtesting strategies.}
@@ -170,6 +163,7 @@
     \resumeSubheading
       {Georgia Institute of Technology}{Atlanta, GA}
       {Research and Teaching Assistant}{Jan 2012 -- Dec 2013}
+      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
       \resumeItemListStart
         \resumeItem{Research Assistant -- Machine Learning}
           {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the Python library QSTK.}
@@ -185,9 +179,11 @@
     \resumeSubheading
       {University of Caen Normandy}{Normandy, France}
       {Master of Science in Applied Mathematics, Statistics and Decision Analysis}{2019 -- 2022}
+      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
     \resumeSubheading
       {University of Caen Normandy}{Normandy, France}
       {Bachelor of Science in General Mathematics}{2016 -- 2019}
+      {TL;DR: Built core notification services and high-volume data ingestion pipelines}
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
